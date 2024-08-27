@@ -1,4 +1,3 @@
-
 .registration-form {
     background-color: #e0f7fa; /* Light blue background */
     color: #00796b; /* Teal color for text */
@@ -9,8 +8,7 @@
     flex-direction: column;
     align-items: center;
   }
-
-
+  
   .registration-form-header {
     background-color: #0288d1; /* Blue background for header */
     color: white;
@@ -67,5 +65,48 @@
     font-size: 12px;
     margin-top: -8px;
     margin-bottom: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .registration-form {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .registration-form-header {
+      padding: 15px; /* Adjust padding for header on smaller screens */
+    }
+  
+    .registration-form input[type="text"],
+    .registration-form input[type="password"] {
+      font-size: 14px; /* Adjust font size for input fields */
+      padding: 8px; /* Adjust padding for input fields */
+    }
+  
+    .registration-form button {
+      font-size: 14px; /* Adjust font size for button */
+      padding: 8px 16px; /* Adjust padding for button */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .registration-form {
+      padding: 10px; /* Further adjust padding for phones */
+    }
+  
+    .registration-form-header {
+      padding: 10px; /* Further adjust header padding for phones */
+    }
+  
+    .registration-form input[type="text"],
+    .registration-form input[type="password"] {
+      font-size: 12px; /* Further adjust font size for input fields */
+      padding: 6px; /* Further adjust padding for input fields */
+    }
+  
+    .registration-form button {
+      font-size: 12px; /* Further adjust font size for button */
+      padding: 6px 12px; /* Further adjust padding for button */
+    }
   }
   

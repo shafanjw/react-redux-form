@@ -1,4 +1,3 @@
-
 .array-manipulation {
     background-color: #e0f7fa; /* Light blue background */
     color: #00796b; /* Teal color for text */
@@ -8,11 +7,13 @@
   }
   
   .array-manipulation form {
-    margin: 20px 0;
+    margin: 20px auto; /* Center the form horizontally */
+    max-width: 500px; /* Limit the form width */
   }
   
   .array-manipulation label {
-    margin-right: 10px;
+    display: block; /* Stack labels above inputs */
+    margin-bottom: 10px; /* Space between label and input */
   }
   
   .array-manipulation input[type="text"],
@@ -22,7 +23,8 @@
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 10px;
-    width: 250px;
+    width: 100%; /* Full width on small screens */
+    max-width: 100%; /* Ensure it does not exceed container width */
     transition: border-color 0.3s;
   }
   
@@ -54,5 +56,38 @@
   
   .array-manipulation li {
     margin: 10px 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .array-manipulation {
+      padding: 15px;
+    }
+  
+    .array-manipulation input[type="text"],
+    .array-manipulation input[type="number"] {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    .array-manipulation button {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust button padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .array-manipulation {
+      padding: 10px;
+    }
+  
+    .array-manipulation input[type="text"],
+    .array-manipulation input[type="number"] {
+      font-size: 12px; /* Further adjust font size */
+    }
+  
+    .array-manipulation button {
+      font-size: 12px; /* Further adjust button font size */
+      padding: 6px 12px; /* Further adjust button padding */
+    }
   }
   

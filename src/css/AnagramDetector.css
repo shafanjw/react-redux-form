@@ -1,4 +1,3 @@
-
 .anagram-detector {
     background-color: #e0f7fa; /* Light blue background */
     color: #00796b; /* Teal color for text */
@@ -8,11 +7,13 @@
   }
   
   .anagram-detector form {
-    margin: 20px 0;
+    margin: 20px auto; /* Center the form horizontally */
+    max-width: 500px; /* Limit the form width */
   }
   
   .anagram-detector label {
-    margin-right: 10px;
+    display: block; /* Stack labels above inputs */
+    margin-bottom: 10px; /* Space between label and input */
   }
   
   .anagram-detector input[type="text"] {
@@ -21,7 +22,8 @@
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 10px;
-    width: 250px;
+    width: 100%; /* Full width on small screens */
+    max-width: 100%; /* Ensure it does not exceed container width */
     transition: border-color 0.3s;
   }
   
@@ -47,5 +49,36 @@
   
   .anagram-detector h4 {
     margin-top: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .anagram-detector {
+      padding: 15px;
+    }
+  
+    .anagram-detector input[type="text"] {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    .anagram-detector button {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust button padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .anagram-detector {
+      padding: 10px;
+    }
+  
+    .anagram-detector input[type="text"] {
+      font-size: 12px; /* Further adjust font size */
+    }
+  
+    .anagram-detector button {
+      font-size: 12px; /* Further adjust button font size */
+      padding: 6px 12px; /* Further adjust button padding */
+    }
   }
   
