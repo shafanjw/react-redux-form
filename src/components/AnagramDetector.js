@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 import { anagramDetection } from "../utils/anagramDetection";
+import '../css/AnagramDetector.css'; // Import the CSS file
 
 const AnagramDetector = () => {
   const [string1, setString1] = useState("");
@@ -12,7 +14,7 @@ const AnagramDetector = () => {
   };
 
   return (
-    <div>
+    <div className="anagram-detector">
       <h3>Anagram Detection</h3>
       <form onSubmit={handleCheckAnagram}>
         <div>

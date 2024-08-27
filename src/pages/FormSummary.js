@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import '../css/FormSummary.css'; 
 
 const FormSummary = () => {
   const location = useLocation();
@@ -11,11 +13,11 @@ const FormSummary = () => {
   }
 
   const handleNext = () => {
-    navigate('/choose-function'); // Navigate to the "Choose a Function" page
+    navigate('/choose-function'); 
   };
 
   return (
-    <div>
+    <div className="form-summary">
       <h2>Form Summary</h2>
       <p><strong>Name:</strong> {formData.firstName}</p>
       <p><strong>Email:</strong> {formData.email}</p>

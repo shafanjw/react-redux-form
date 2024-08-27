@@ -1,0 +1,58 @@
+
+.array-manipulation {
+    background-color: #e0f7fa; /* Light blue background */
+    color: #00796b; /* Teal color for text */
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .array-manipulation form {
+    margin: 20px 0;
+  }
+  
+  .array-manipulation label {
+    margin-right: 10px;
+  }
+  
+  .array-manipulation input[type="text"],
+  .array-manipulation input[type="number"] {
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 250px;
+    transition: border-color 0.3s;
+  }
+  
+  .array-manipulation input[type="text"]:focus,
+  .array-manipulation input[type="number"]:focus {
+    border-color: #0288d1; /* Change border color on focus */
+  }
+  
+  .array-manipulation button {
+    background-color: #0288d1; /* Blue background for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .array-manipulation button:hover {
+    background-color: #01579b; /* Darker blue on hover */
+  }
+  
+  .array-manipulation ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .array-manipulation li {
+    margin: 10px 0;
+  }
+  

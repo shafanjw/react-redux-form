@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TextInput from '../components/TextInput';
+import '../css/RegistrationForm.css'; // Import the CSS file
 
 const validate = values => {
   const errors = {};

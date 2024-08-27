@@ -1,0 +1,25 @@
+
+.form-summary {
+    background-color: #e0f7fa; /* Light blue background */
+    color: #00796b; /* Teal color for text */
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .form-summary button {
+    background-color: #0288d1; /* Blue background for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .form-summary button:hover {
+    background-color: #01579b; /* Darker blue on hover */
+  }
+  

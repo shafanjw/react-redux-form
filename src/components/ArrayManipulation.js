@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 import { findPairs } from "../utils/findPairs";
+import '../css/ArrayManipulation.css'; // Import the CSS file
 
 const ArrayManipulation = () => {
   const [arrayInput, setArrayInput] = useState(""); 
@@ -15,7 +17,7 @@ const ArrayManipulation = () => {
 
   // UI rendering
   return (
-    <div>
+    <div className="array-manipulation">
       <h3>Array Manipulation</h3>
       <form onSubmit={handleSubmit}>
         <div>
@@ -25,7 +27,6 @@ const ArrayManipulation = () => {
             value={arrayInput}
             onChange={(e) => setArrayInput(e.target.value)}
             placeholder="Enter numbers separated by commas"
-            style={{ width: "250px" }}
           />
         </div>
         <div>
@@ -35,7 +36,6 @@ const ArrayManipulation = () => {
             value={target}
             onChange={(e) => setTarget(e.target.value)}
             placeholder="Enter target sum"
-            style={{ width: "250px" }}
           />
         </div>
         <button type="submit">Find Pairs</button>
