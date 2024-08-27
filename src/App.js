@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ArrayManipulation from './components/ArrayManipulation';
+import AnagramDetector from './components/AnagramDetector';
+import RegistrationForm from './components/RegistrationForm';
 
 function App() {
+  const [page, setPage] = useState('registration'); // Initial page is 'registration'
+
+  const handleRegistrationSubmit = () => {
+    setPage('chooseFunction'); // Move to 'chooseFunction' page after form submission
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {page === 'registration' && (
+        <RegistrationForm onSubmit={handleRegistrationSubmit} />
+      )}
+      
+      {page === 'chooseFunction' && (
+        <>
+          <h1>Choose a Function</h1>
+          <button onClick={() => setPage('anagram')}>Anagram Detector</button>
+          <button onClick={() => setPage('arrayManipulation')}>Array Manipulation</button>
+        </>
+      )}
+
+      {page === 'anagram' && <AnagramDetector />}
+      {page === 'arrayManipulation' && <ArrayManipulation />}
     </div>
   );
 }

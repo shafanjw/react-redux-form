@@ -1,17 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RegistrationForm from './components/RegistrationForm';
+import FormSummary from './pages/FormSummary'; 
+import ArrayManipulation from './components/ArrayManipulation';
+import AnagramDetector from './components/AnagramDetector';
+import ChooseFunction from './pages/ChooseFunction';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<RegistrationForm />} />
+      <Route path="/form-summary" element={<FormSummary />} />
+      <Route path="/choose-function" element={<ChooseFunction />} />
+      <Route path="/anagram" element={<AnagramDetector />} /> {/* Ensure these routes exist */}
+      <Route path="/array-manipulation" element={<ArrayManipulation />} />
+    </Routes>
+  </Router>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root'));
